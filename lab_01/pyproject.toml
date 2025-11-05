@@ -1,0 +1,26 @@
+[project]
+name = "lab-01"
+version = "0.1.0"
+authors = [
+    {name = "=",email = "kacperpap@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi (>=0.119.0,<0.120.0)",
+    "sqlalchemy (>=2.0.44,<3.0.0)",
+    "pydantic (>=2.12.3,<3.0.0)",
+    "uvicorn (>=0.38.0,<0.39.0)",
+    "pytest (>=8.4.2,<9.0.0)"
+]
+packages = [
+  { include = "lab_01", from = "src" }
+]
+
+[tool.poetry.scripts]
+lab01-dev = "lab_01.main:run_dev"
+lab01-start = "lab_01.main:run_prod"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

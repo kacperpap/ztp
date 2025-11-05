@@ -1,0 +1,107 @@
+# === PYTHON / POETRY ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.egg-info/
+*.egg
+build/
+dist/
+.eggs/
+*.manifest
+*.spec
+*.lock
+
+# Poetry virtual environment (if created in project)
+.venv/
+poetry.lock
+
+# Local Python environment overrides
+.env
+.env.*
+*.env
+venv/
+env/
+ENV/
+
+# Byte-compiled / optimized / DLL files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# SQLite database file
+lab01.db
+*.sqlite3
+*.db
+
+# Log files
+*.log
+logs/
+log/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# IDE / Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.bak
+*.orig
+
+# OS-specific
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# pytest result cache
+.pytest_cache/
+
+# Mypy / pyright / type checking
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+
+# Profiling / debugging
+.prof
+.profraw
+
+# Temporary data
+tmp/
+temp/
+__temp__/
+*.tmp
+
+# Coverage / lint reports
+*.coverage
+*.tox
+*.nox
+.cache/
+reports/
+report.html
+
+# Misc
+*.iml
+*.ipr
+*.iws
+*.sublime-workspace
+*.sublime-project

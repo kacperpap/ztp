@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "06f5fc88-0801-43c9-8760-d2e4f0bbf66a",
+		"name": "ZTP - Lab 01 API",
+		"description": "Postman collection for FastAPI lab_01 project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24977610"
+	},
+	"item": [
+		{
+			"name": "Get all products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/api/products/"
+			},
+			"response": []
+		},
+		{
+			"name": "Create product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"TestProduct1\",\n  \"category\": \"books\",\n  \"price\": 25.5,\n  \"quantity\": 10\n}"
+				},
+				"url": "{{base_url}}/api/products/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get product by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/api/products/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Update product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"TestProductRenamed\",\n    \"category\": \"books\",\n    \"price\": 29.99,\n    \"quantity\": 11\n}"
+				},
+				"url": "{{base_url}}/api/products/14"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{base_url}}/api/products/14"
+			},
+			"response": []
+		},
+		{
+			"name": "Get product history",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/api/products/1/history"
+			},
+			"response": []
+		},
+		{
+			"name": "Get forbidden phrases",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/api/forbidden/"
+			},
+			"response": []
+		},
+		{
+			"name": "Add forbidden phrase",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"phrase\": \"no\" }"
+				},
+				"url": "{{base_url}}/api/forbidden/"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete forbidden phrase",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{base_url}}/api/forbidden/11"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000"
+		}
+	]
+}
