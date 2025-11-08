@@ -3,7 +3,7 @@ from sqlalchemy import select, delete
 from typing import Optional, List
 import json
 
-from . import models, schemas
+from . import models
 
 class ProductRepository:
     def __init__(self, db: Session):

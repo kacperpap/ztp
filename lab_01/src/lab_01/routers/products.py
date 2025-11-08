@@ -1,10 +1,10 @@
-from fastapi import APIRouter, Depends, status
+from fastapi import APIRouter, Depends, status, HTTPException
 from typing import List
 from sqlalchemy.orm import Session
 
-from .. import schemas, services, database
+from .. import schemas, services, database, models
 
-router = APIRouter(prefix="/api/products", tags=["products"])
+router = APIRouter(prefix="/api/v1/products", tags=["products"])
 
 def get_service(db: Session = Depends(database.get_db)):
     return services.ProductService(db)

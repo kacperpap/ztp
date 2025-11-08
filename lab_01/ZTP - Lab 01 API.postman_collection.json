@@ -12,7 +12,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{base_url}}/api/products/"
+				"url": "{{base_url}}/api/v1/products/"
 			},
 			"response": []
 		},
@@ -30,7 +30,7 @@
 					"mode": "raw",
 					"raw": "{\n  \"name\": \"TestProduct1\",\n  \"category\": \"books\",\n  \"price\": 25.5,\n  \"quantity\": 10\n}"
 				},
-				"url": "{{base_url}}/api/products/"
+				"url": "{{base_url}}/api/v1/products/"
 			},
 			"response": []
 		},
@@ -39,7 +39,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{base_url}}/api/products/1"
+				"url": "{{base_url}}/api/v1/products/1"
 			},
 			"response": []
 		},
@@ -57,7 +57,7 @@
 					"mode": "raw",
 					"raw": "{\n    \"name\": \"TestProductRenamed\",\n    \"category\": \"books\",\n    \"price\": 29.99,\n    \"quantity\": 11\n}"
 				},
-				"url": "{{base_url}}/api/products/14"
+				"url": "{{base_url}}/api/v1/products/14"
 			},
 			"response": []
 		},
@@ -66,7 +66,7 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": "{{base_url}}/api/products/14"
+				"url": "{{base_url}}/api/v1/products/14"
 			},
 			"response": []
 		},
@@ -75,7 +75,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{base_url}}/api/products/1/history"
+				"url": "{{base_url}}/api/v1/products/1/history"
 			},
 			"response": []
 		},
@@ -84,7 +84,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{base_url}}/api/forbidden/"
+				"url": "{{base_url}}/api/v1/forbidden/"
 			},
 			"response": []
 		},
@@ -102,7 +102,7 @@
 					"mode": "raw",
 					"raw": "{ \"phrase\": \"no\" }"
 				},
-				"url": "{{base_url}}/api/forbidden/"
+				"url": "{{base_url}}/api/v1/forbidden/"
 			},
 			"response": []
 		},
@@ -111,7 +111,7 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": "{{base_url}}/api/forbidden/11"
+				"url": "{{base_url}}/api/v1/forbidden/11"
 			},
 			"response": []
 		}

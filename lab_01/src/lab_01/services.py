@@ -5,7 +5,6 @@ import re
 
 from . import repositories, models, schemas
 
-# business rules for price ranges by category
 PRICE_RULES = {
     "electronics": {"min": 50.0, "max": 50000.0},
     "books": {"min": 5.0, "max": 500.0},
@@ -20,7 +19,6 @@ class ProductService:
         self.history_repo = repositories.HistoryRepository(db)
 
     def _check_forbidden(self, name: str):
-        # dynamic list of phrases; case-insensitive substring match
         phrases = [p.phrase for p in self.forbidden_repo.list_all()]
         lowered = name.lower()
         for ph in phrases:
@@ -112,7 +110,6 @@ class ProductService:
         self.repo.delete(product)
 
     def get_history(self, product_id: int):
-        # raise if product missing? we allow history even if product deleted => check histories
         histories = self.history_repo.list_for_product(product_id)
         if not histories:
             raise HTTPException(status_code=404, detail="No history found for product")
@@ -127,7 +124,6 @@ class ForbiddenService:
         return self.repo.list_all()
 
     def create_phrase(self, phrase: str):
-        # simple normalization
         existing = self.repo.get_by_phrase(phrase)
         if existing:
             raise HTTPException(status_code=400, detail="Phrase already exists")

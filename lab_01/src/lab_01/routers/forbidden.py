@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 
 from .. import schemas, services, database
 
-router = APIRouter(prefix="/api/forbidden", tags=["forbidden"])
+router = APIRouter(prefix="/api/v1/forbidden", tags=["forbidden"])
 
 def get_service(db: Session = Depends(database.get_db)):
     return services.ForbiddenService(db)

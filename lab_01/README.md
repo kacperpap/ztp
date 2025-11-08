@@ -34,7 +34,7 @@ poetry install
 ```
 2. Uruchom w trybie developerskim (autoreload):
 ```
-poetry run lab01-dev
+poetry run dev
 ```
 - przy pierwszym starcie utworzy się `lab01.db` i zainicjalizuje tabele przykłądowymi danymi
 
@@ -56,20 +56,20 @@ Swagger: http://127.0.0.1:8000/docs
 ---
 ## Endpointy
 
-### Produkty `/api/products`
-- `POST /api/products/` — dodaj produkt  
+### Produkty `/api/v1/products`
+- `POST /api/v1/products/` — dodaj produkt  
   Body JSON: `{ "name": "...", "category": "books|electronics|clothing", "price": 12.3, "quantity": 5 }`  
   Walidacja: patrz sekcja "Zasady walidacji". Zwraca 201 lub 400/422.
-- `GET /api/products/` — lista wszystkich produktów
-- `GET /api/products/{id}` — pobierz produkt po id
-- `PUT /api/products/{id}` — aktualizuj produkt (pola opcjonalne, te same reguły walidacji)
-- `DELETE /api/products/{id}` — usuń produkt
-- `GET /api/products/{id}/history` — historia zmian produktu (create/update/delete)
+- `GET /api/v1/products/` — lista wszystkich produktów
+- `GET /api/v1/products/{id}` — pobierz produkt po id
+- `PUT /api/v1/products/{id}` — aktualizuj produkt (pola opcjonalne, te same reguły walidacji)
+- `DELETE /api/v1/products/{id}` — usuń produkt
+- `GET /api/v1/products/{id}/history` — historia zmian produktu (create/update/delete)
 
-### Frazy zabronione `/api/forbidden`
-- `GET /api/forbidden/` — lista fraz
-- `POST /api/forbidden/` — dodaj frazę `{ "phrase": "..." }`
-- `DELETE /api/forbidden/{id}` — usuń frazę po ID
+### Frazy zabronione `/api/v1/forbidden`
+- `GET /api/v1/forbidden/` — lista fraz
+- `POST /api/v1/forbidden/` — dodaj frazę `{ "phrase": "..." }`
+- `DELETE /api/v1/forbidden/{id}` — usuń frazę po ID
 
 ---
 ## Dopuszczalne i zabronione operacje
@@ -87,7 +87,7 @@ Swagger: http://127.0.0.1:8000/docs
 ## Testy
 Uruchom testy:
 ```
-poetry run pytest -q
+poetry run pytest
 ```
 ---
 ## Postman — kolekcja i import

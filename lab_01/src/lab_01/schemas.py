@@ -1,10 +1,9 @@
-# src/lab_01/schemas.py
 from typing import Optional, List
 from datetime import datetime
 from pydantic import BaseModel, Field, field_validator, constr
 from enum import Enum
 
-class Category(str, Enum):
+class Category(Enum):
     electronics = "electronics"
     books = "books"
     clothing = "clothing"

@@ -1,4 +1,3 @@
-# src/lab_01/main.py
 from fastapi import FastAPI
 import uvicorn
 

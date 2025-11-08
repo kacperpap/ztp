@@ -1,10 +1,8 @@
-# src/lab_01/seeds.py
 from pathlib import Path
 from typing import List
 import traceback
 
 from .database import DEFAULT_DB_PATH, DATABASE_URL, engine, SessionLocal, Base
-from .models import ForbiddenPhrase
 from .repositories import ForbiddenRepository
 from .services import ProductService
 from .schemas import ProductCreate, Category
@@ -70,7 +68,6 @@ def initialize_db_and_seed():
                 if not forb_repo.get_by_phrase(phrase):
                     forb_repo.create(phrase)
             except Exception:
-                # continue on errors but print
                 print(f"Failed to create forbidden phrase '{phrase}':")
                 traceback.print_exc()
 
